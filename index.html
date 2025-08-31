@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Hotline</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <!-- navbar section start  -->
-<div class="navbar w-[1300px] mx-auto justify-between items-center pt-5 bf-[#FFFFFF]">
-  <div class="flex items-center">
-    <img class="h-16 w-16" src="./assets/logo.png" alt="">
-    <h1 class="text-xl ml-5 font-bold text-[#006747]">Emergency<br>Service</h1>
-  </div>
-  <div class="flex items-center">
-    <ul class="menu menu-horizontal px-1">
-      <li class="ml-6"><a class="bg-[#41ff6b1a] py-2 px-5 rounded-full"><span>0</span><img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="" srcset=""></a></li>
-      <li class="ml-6"><a class="bg-[#41ff6b1a] py-2 px-5 rounded-full"><span>100</span><img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="" srcset=""></a></li>
-      <li class="ml-6"><a class="bg-[#00a63e] py-3 px-6 rounded-full"><span>2</span>Copy</a></li>
-    </ul>
-  </div>
-</div>
 
-    <script src="./js/script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Hotline</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- navbar section start -->
+  <div class="navbar w-full max-w-[1300px] mx-auto justify-between items-center pt-5 bg-[#FFFFFF] px-4 flex flex-wrap">
+
+    <!-- Left logo -->
+    <div class="flex items-center mb-3 md:mb-0">
+      <img class="h-12 w-12 sm:h-16 sm:w-16" src="./assets/logo.png" alt="">
+      <h1 class="text-lg sm:text-xl ml-3 sm:ml-5 font-bold text-[#006747] leading-tight">
+        Emergency<br>Service
+      </h1>
+    </div>
+
+    <!-- Right menu -->
+    <div class="flex flex-wrap items-center justify-center md:justify-end w-full md:w-auto">
+      <ul class="flex flex-wrap gap-3 sm:gap-4 md:gap-6 px-1">
+        <li>
+          <a class="bg-[#41ff6b1a] py-2 px-4 md:px-5 rounded-full flex items-center gap-2">
+            <span>0</span>
+            <img class="w-5 h-5 md:w-[30px] md:h-[30px]" src="./assets/heart.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="bg-[#41ff6b1a] py-2 px-4 md:px-5 rounded-full flex items-center gap-2">
+            <span>100</span>
+            <img class="w-5 h-5 md:w-[30px] md:h-[30px]" src="./assets/coin.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="bg-[#00a63e] py-2 md:py-3 px-5 md:px-6 rounded-full text-white">
+            <span>2</span> Copy
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- banner section start -->
+  <div class="bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] 
+            w-full h-[180px] sm:h-[200px] md:h-[239px] 
+            flex flex-col justify-center items-center mt-7 px-4 text-center">
+
+    <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] md:w-[92px] md:h-[92px] mb-3" src="./assets/logo-dark.png"
+      alt="">
+    <h2 class="text-2xl sm:text-3xl md:text-[42px] font-bold text-white leading-snug">
+      Emergency Service Directory
+    </h2>
+    <p class="text-white">
+      Government Emergency Services at Your Fingertip – A Project by
+      Government of the People’s Republic of Bangladesh
+    </p>
+
+  </div>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
