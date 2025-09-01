@@ -57,3 +57,27 @@ const list = document.getElementById('list');
 clear.addEventListener('click', function(){
     list.innerHTML = "";
 })
+
+// copy 
+
+const copyCount = document.getElementById('copyCount');
+const copyBtn = document.querySelectorAll('.copy-btn');
+let totalCopyCount = 0;
+for (const copy of copyBtn) {
+    copy.addEventListener('click', function(){
+       const card = this.closest('.card');
+       const serverNumber = card.querySelector('.server-number');
+       const sTrim = serverNumber.textContent.trim();
+       console.log(sTrim);
+       
+       const createTextArea = document.createElement('textarea');
+       createTextArea.value = sTrim;
+       document.body.appendChild(createTextArea);
+       createTextArea.select();
+       document.execCommand('copy');
+       document.body.removeChild(createTextArea);
+       alert(`Copied Number ${sTrim}`)
+       totalCopyCount++;
+       copyCount.textContent = totalCopyCount;
+    })
+}
