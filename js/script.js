@@ -4,7 +4,7 @@ const heartCount = document.getElementById('heart-count');
 const heartBtn = document.querySelectorAll('.btn-heart');
 let totalHeart = 0;
 for (const heart of heartBtn) {
-    heart.addEventListener('click', function(){
+    heart.addEventListener('click', function () {
         totalHeart++;
         heartCount.textContent = totalHeart;
     })
@@ -14,7 +14,7 @@ for (const heart of heartBtn) {
 
 const totalCoin = document.getElementById('coinText');
 const serverNumber = document.querySelectorAll('.server-number');
-const  serverName = document.querySelectorAll('.server-name');
+const serverName = document.querySelectorAll('.server-name');
 const callCoin = document.querySelectorAll('.call');
 
 for (let i = 0; i < callCoin.length; i++) {
@@ -43,18 +43,15 @@ for (let i = 0; i < callCoin.length; i++) {
                 </div>
               </div>    
         `;
-   
-      list.appendChild(createDiv);
-      
-      
-      
+        list.appendChild(createDiv);
     })
 }
 
 // clear
+
 const clear = document.getElementById('clear');
 const list = document.getElementById('list');
-clear.addEventListener('click', function(){
+clear.addEventListener('click', function () {
     list.innerHTML = "";
 })
 
@@ -64,20 +61,20 @@ const copyCount = document.getElementById('copyCount');
 const copyBtn = document.querySelectorAll('.copy-btn');
 let totalCopyCount = 0;
 for (const copy of copyBtn) {
-    copy.addEventListener('click', function(){
-       const card = this.closest('.card');
-       const serverNumber = card.querySelector('.server-number');
-       const sTrim = serverNumber.textContent.trim();
-       console.log(sTrim);
-       
-       const createTextArea = document.createElement('textarea');
-       createTextArea.value = sTrim;
-       document.body.appendChild(createTextArea);
-       createTextArea.select();
-       document.execCommand('copy');
-       document.body.removeChild(createTextArea);
-       alert(`Copied Number ${sTrim}`)
-       totalCopyCount++;
-       copyCount.textContent = totalCopyCount;
+    copy.addEventListener('click', function () {
+        const card = this.closest('.card');
+        const serverNumber = card.querySelector('.server-number');
+        const sTrim = serverNumber.textContent.trim();
+        console.log(sTrim);
+
+        const createTextArea = document.createElement('textarea');
+        createTextArea.value = sTrim;
+        document.body.appendChild(createTextArea);
+        createTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(createTextArea);
+        alert(`Copied Number ${sTrim}`)
+        totalCopyCount++;
+        copyCount.textContent = totalCopyCount;
     })
 }
